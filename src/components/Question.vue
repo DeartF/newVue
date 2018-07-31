@@ -44,9 +44,9 @@
 		methods: {
 			onAnswer(num) {
 				if(num == this.good){
-					
+					this.$emit('success');
 				} else {
-					
+					this.$emit('error' , `${this.x} + ${this.y} = ${this.good}!`);
 				}
 			}
 		}
@@ -71,5 +71,9 @@
 		display: -o-flex;
 		display: flex;
 		justify-content: space-around;
+	}
+
+	.btn {
+		margin: 20px 0;
 	}
 </style>
